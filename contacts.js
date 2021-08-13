@@ -39,7 +39,7 @@ const removeContact = async (contactId) => {
     }
 
     const filteredContact = allContacts.filter(
-      (contact) => allContacts[idx].id !== contact.id
+      ({ id }) => allContacts[idx].id !== id
     );
     const contactsString = JSON.stringify(filteredContact);
     await fs.writeFile(contactsPath, contactsString);
