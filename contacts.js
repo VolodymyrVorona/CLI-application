@@ -53,7 +53,6 @@ const removeContact = async (contactId) => {
 const addContact = async (name, email, phone) => {
   console.log(name, email, phone);
 };
-//function addContact(name, email, phone) {}
 
 module.exports = {
   listContacts,
