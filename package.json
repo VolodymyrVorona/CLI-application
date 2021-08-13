@@ -1,0 +1,24 @@
+{
+  "name": "cli-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://github.com/VolodymyrVorona/cli-application#readme",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VolodymyrVorona/cli-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VolodymyrVorona/cli-application/issues"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
