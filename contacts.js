@@ -1,7 +1,7 @@
-const fs = require("fs/promises");
-const path = require("path");
+const fs = require('fs/promises');
+const path = require('path');
 
-const contactsPath = path.join(__dirname, "db", "contacts.json");
+const contactsPath = path.join(__dirname, 'db', 'contacts.json');
 
 // TODO: задокументировать каждую функцию
 const listContacts = async () => {
@@ -14,7 +14,7 @@ const listContacts = async () => {
   }
 };
 
-const getContactById = async (contactId) => {
+const getContactById = async contactId => {
   try {
     const allContacts = await listContacts();
     const contact = allContacts.find(({ id }) => id === contactId);
@@ -29,7 +29,7 @@ const getContactById = async (contactId) => {
   }
 };
 
-const removeContact = async (contactId) => {
+const removeContact = async contactId => {
   try {
     const allContacts = await listContacts();
     const idx = allContacts.findIndex(({ id }) => id === contactId);
@@ -39,7 +39,7 @@ const removeContact = async (contactId) => {
     }
 
     const filteredContact = allContacts.filter(
-      ({ id }) => allContacts[idx].id !== id
+      ({ id }) => allContacts[idx].id !== id,
     );
     const contactsString = JSON.stringify(filteredContact);
     await fs.writeFile(contactsPath, contactsString);
